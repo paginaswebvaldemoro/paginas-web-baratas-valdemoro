@@ -1,302 +1,339 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Paginas Web Baratas Valdemoro - Desarrollo Web Profesional</title>
-  <meta name="description" content="Páginas web baratas en Valdemoro. Diseño profesional, web responsive y SEO local para negocios y emprendedores. Contacta ya: 615 09 68 57" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Paginas Web Baratas Valdemoro | Diseño y Desarrollo Profesional SEO</title>
+<meta name="description" content="Diseño y desarrollo de páginas web baratas en Valdemoro. Webs profesionales, rápidas y optimizadas para Google y tus clientes. Contacta: 615 09 68 57." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro" />
 
-  <style>
-    /* Reset básico */
-    *, *::before, *::after { box-sizing: border-box; }
-    body {
-      margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9; color: #222; line-height: 1.5;
-    }
+<!-- JSON-LD para SEO local y empresa -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Paginas Web Baratas Valdemoro",
+  "image": "https://paginaswebvaldemoro.github.io/logo.png",
+  "telephone": "+34615096857",
+  "email": "paginaswebvaldemoro@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Valdemoro",
+    "addressRegion": "Madrid",
+    "addressCountry": "ES"
+  },
+  "url": "https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro",
+  "description": "Diseño y desarrollo de páginas web baratas en Valdemoro, rápidas, responsivas y optimizadas para SEO local.",
+  "openingHours": "Mo,Tu,We,Th,Fr 09:00-19:00"
+}
+</script>
+
+<style>
+  /* Reset */
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fefefe; color: #1a1a1a; line-height: 1.6;
+  }
+  a {
+    color: #0d47a1; text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  header {
+    background-color: #0d47a1;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  nav a {
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  nav a:first-child {
+    margin-left: 0;
+  }
+  nav a:focus-visible {
+    outline: 2px solid #ffca28;
+    outline-offset: 2px;
+  }
+
+  /* Slider */
+  .slider {
+    max-width: 1100px;
+    margin: 1.5rem auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+  }
+  .slide {
+    min-width: 100%;
+    position: relative;
+    color: white;
+  }
+  .slide img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(0.55);
+    border-radius: 12px;
+  }
+  .slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+  }
+  .slide-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.3rem;
+  }
+  .slide-text p {
+    font-size: 1.3rem;
+  }
+  .slider-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  .slider-btn {
+    pointer-events: auto;
+    background: rgba(0,0,0,0.45);
+    border: none;
+    color: white;
+    font-size: 2.2rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .slider-btn:hover,
+  .slider-btn:focus {
+    background: #ffca28;
+    color: #0d47a1;
+    outline: none;
+  }
+
+  /* Main content */
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+  }
+  h2, h3 {
+    color: #0d47a1;
+    margin-bottom: 1rem;
+  }
+  section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+  }
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 1.3rem;
+  }
+  .service-item {
+    background: #e3f2fd;
+    border-radius: 10px;
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    color: #0d47a1;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    user-select: none;
+    transition: background 0.25s ease;
+  }
+  .service-item:hover {
+    background: #bbdefb;
+  }
+  .service-icon {
+    font-size: 2.4rem;
+    line-height: 1;
+  }
+
+  /* Contacto */
+  #contacto p {
+    font-size: 1.18rem;
+    margin-bottom: 0.4rem;
+  }
+  #contacto a {
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  #contacto a:hover,
+  #contacto a:focus {
+    border-color: #ffca28;
+    outline: none;
+  }
+  #contacto .telefono {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    color: #0d47a1;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #0d47a1;
+    color: white;
+    padding: 1.1rem;
+    font-size: 0.95rem;
+    user-select: none;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.25);
+  }
+
+  @media (max-width: 600px) {
     header {
-      background: #0d47a1; color: white;
-      padding: 1rem 2rem;
-      position: sticky; top: 0; z-index: 1000;
-      display: flex; justify-content: space-between; align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      margin: 0; font-size: 1.5rem;
-    }
-    nav a {
-      color: white; text-decoration: none;
-      margin-left: 1.5rem; font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffca28;
-    }
-    /* Slideshow */
-    .slider {
-      position: relative;
-      max-width: 1000px;
-      margin: 1.5rem auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .slide {
-      min-width: 100%;
-      position: relative;
-      color: white;
-      text-align: center;
-    }
-    .slide img {
-      width: 100%;
-      vertical-align: middle;
-      object-fit: cover;
-      height: 400px;
-      filter: brightness(0.55);
-      border-radius: 10px;
-    }
-    .slide-text {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 90%;
-      font-weight: 700;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
     }
     .slide-text h2 {
-      font-size: 2.5rem; margin-bottom: 0.3rem;
+      font-size: 1.8rem;
     }
     .slide-text p {
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
-    .slider-buttons {
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      justify-content: space-between;
-      padding: 0 1rem;
-      pointer-events: none;
-    }
-    .slider-btn {
-      background: rgba(0,0,0,0.4);
-      border: none;
-      color: white;
-      font-size: 2rem;
-      cursor: pointer;
-      pointer-events: auto;
-      border-radius: 50%;
-      width: 40px; height: 40px;
-      display: flex; justify-content: center; align-items: center;
-      transition: background 0.3s ease;
-    }
-    .slider-btn:hover {
-      background: rgba(255, 202, 40, 0.85);
-      color: #0d47a1;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h2, h3 {
-      color: #0d47a1;
-      margin-bottom: 1rem;
-    }
-    section {
-      background: white;
-      padding: 1.8rem 2rem;
-      margin-bottom: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    /* Servicios */
-    .services-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.2rem;
-    }
-    .service-item {
-      background: #e3f2fd;
-      border-radius: 8px;
-      padding: 1rem 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      font-weight: 600;
-      color: #0d47a1;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
-      transition: background 0.3s ease;
-      cursor: default;
-    }
-    .service-item:hover {
-      background: #bbdefb;
-    }
-    .service-icon {
-      font-size: 2rem;
-    }
-
-    /* Contacto */
-    #contacto p {
-      font-size: 1.15rem;
-    }
-    #contacto a {
-      color: #0d47a1;
-      font-weight: 700;
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s ease;
-    }
-    #contacto a:hover {
-      border-color: #ffca28;
-    }
-    #contacto .telefono {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #0d47a1;
-      margin-top: 0.6rem;
-    }
-
-    footer {
-      text-align: center;
-      background: #0d47a1;
-      color: white;
-      padding: 1rem;
-      font-size: 0.9rem;
-      user-select: none;
-      box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .slide-text h2 {
-        font-size: 1.8rem;
-      }
-      .slide-text p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
 <header>
-  <h1>Páginas Web Baratas Valdemoro</h1>
-  <nav>
+  <h1>Paginas Web Baratas Valdemoro</h1>
+  <nav aria-label="Menú principal">
     <a href="#servicios">Servicios</a>
     <a href="#portfolio">Trabajos</a>
     <a href="#contacto">Contacto</a>
   </nav>
 </header>
 
-<div class="slider" aria-label="Presentación de servicios de desarrollo web">
+<!-- SLIDER -->
+<div class="slider" role="region" aria-label="Presentación de servicios de desarrollo web">
   <div class="slides" id="slides">
-    <div class="slide" role="group" aria-roledescription="slide" aria-label="Diseño web profesional">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Diseño web profesional, moderna y responsiva" />
+    <div class="slide" aria-hidden="false">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/04/19/code-1869235_1280.jpg" alt="Diseño web profesional" loading="lazy" />
       <div class="slide-text">
-        <h2>Diseño Web Profesional</h2>
-        <p>Webs modernas, responsivas y optimizadas para tu negocio en Valdemoro.</p>
+        <h2>Diseño web profesional en Valdemoro</h2>
+        <p>Webs rápidas, modernas y optimizadas para SEO.</p>
       </div>
     </div>
-    <div class="slide" role="group" aria-roledescription="slide" aria-label="Web barata y rápida">
-      <img src="https://images.unsplash.com/photo-1523475496153-3b6d9d473ca5?auto=format&fit=crop&w=1200&q=80" alt="Página web barata y rápida en Valdemoro" />
+    <div class="slide" aria-hidden="true">
+      <img src="https://cdn.pixabay.com/photo/2017/08/10/03/32/website-2619444_1280.jpg" alt="Desarrollo web responsive" loading="lazy" />
       <div class="slide-text">
-        <h2>Web Barata y Rápida</h2>
-        <p>Tu página lista en pocos días, con precios adaptados a tu presupuesto.</p>
+        <h2>Web responsive y adaptativa</h2>
+        <p>Tu web se verá perfecta en móvil, tablet y PC.</p>
       </div>
     </div>
-    <div class="slide" role="group" aria-roledescription="slide" aria-label="Optimización SEO local">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Optimización SEO local para posicionar en Google" />
+    <div class="slide" aria-hidden="true">
+      <img src="https://cdn.pixabay.com/photo/2019/04/13/21/42/development-4129637_1280.jpg" alt="Optimización SEO local" loading="lazy" />
       <div class="slide-text">
-        <h2>SEO Local Garantizado</h2>
-        <p>Atrae clientes en Valdemoro con posicionamiento SEO especializado y efectivo.</p>
+        <h2>Optimización SEO local en Valdemoro</h2>
+        <p>Posicionamos tu negocio para que te encuentren primero.</p>
       </div>
     </div>
   </div>
   <div class="slider-buttons">
-    <button class="slider-btn" id="prev" aria-label="Slide anterior">&#10094;</button>
-    <button class="slider-btn" id="next" aria-label="Slide siguiente">&#10095;</button>
+    <button class="slider-btn" aria-label="Slide anterior" id="prevBtn">&#10094;</button>
+    <button class="slider-btn" aria-label="Slide siguiente" id="nextBtn">&#10095;</button>
   </div>
 </div>
 
 <main>
-  <section id="servicios" aria-labelledby="servicios-title">
-    <h3 id="servicios-title">Servicios de Desarrollo Web en Valdemoro</h3>
-    <div class="services-list">
-      <article class="service-item" role="article" aria-label="Diseño web personalizado">
-        <div class="service-icon">💻</div>
-        <div>Diseño web personalizado y adaptado a tu marca y necesidades.</div>
-      </article>
-      <article class="service-item" role="article" aria-label="Desarrollo web responsivo">
-        <div class="service-icon">📱</div>
-        <div>Webs 100% responsivas para móviles, tablets y ordenadores.</div>
-      </article>
-      <article class="service-item" role="article" aria-label="Optimización SEO local">
-        <div class="service-icon">🚀</div>
-        <div>Optimización SEO local para posicionarte en Google y atraer clientes de Valdemoro.</div>
-      </article>
-      <article class="service-item" role="article" aria-label="Mantenimiento web">
-        <div class="service-icon">🛠️</div>
-        <div>Mantenimiento y actualización para que tu web esté siempre segura y actual.</div>
-      </article>
-      <article class="service-item" role="article" aria-label="Integración con redes sociales">
-        <div class="service-icon">🔗</div>
-        <div>Integración con redes sociales y WhatsApp para ampliar tu alcance.</div>
-      </article>
-      <article class="service-item" role="article" aria-label="Hosting y dominio">
-        <div class="service-icon">🌐</div>
-        <div>Gestión de hosting y dominio para que no tengas que preocuparte por nada.</div>
-      </article>
+  <section id="servicios" tabindex="-1">
+    <h2>Servicios de diseño y desarrollo web en Valdemoro</h2>
+    <div class="services-list" role="list">
+      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">🖥️</span> Diseño web moderno y responsivo</div>
+      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">⚙️</span> Desarrollo web personalizado</div>
+      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">🚀</span> Optimización SEO local para Google</div>
+      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">🔧</span> Mantenimiento y actualizaciones</div>
+      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">📞</span> Formularios de contacto y WhatsApp</div>
     </div>
   </section>
 
-  <section id="portfolio" aria-labelledby="portfolio-title">
-    <h3 id="portfolio-title">Trabajos Realizados</h3>
-    <p>Hemos creado páginas web para pequeñas empresas, comercios y profesionales en Valdemoro. Cada proyecto está optimizado para captar clientes y mejorar tu presencia online.</p>
+  <section id="portfolio" tabindex="-1">
+    <h2>Trabajos realizados</h2>
+    <p>Próximamente mostraremos ejemplos reales de páginas web hechas para negocios locales en Valdemoro. Trabajos hechos a medida y con resultados visibles.</p>
   </section>
 
-  <section id="contacto" aria-labelledby="contacto-title">
-    <h3 id="contacto-title">Contacto</h3>
-    <p>¿Quieres una página web barata, rápida y profesional para tu negocio en Valdemoro? Escríbenos o llámanos:</p>
-    <p><a href="mailto:paginaswebvaldemoro@gmail.com" rel="nofollow noopener noreferrer">paginaswebvaldemoro@gmail.com</a></p>
+  <section id="contacto" tabindex="-1">
+    <h2>Contacto</h2>
+    <p>¿Quieres una página web barata y profesional? Escríbenos o llama sin compromiso:</p>
+    <p>Email: <a href="mailto:paginaswebvaldemoro@gmail.com" rel="nofollow noopener noreferrer">paginaswebvaldemoro@gmail.com</a></p>
     <p class="telefono" aria-label="Teléfono de contacto">📞 615 09 68 57</p>
   </section>
 </main>
 
 <footer>
-  &copy; 2025 Páginas Web Baratas Valdemoro. Todos los derechos reservados.
+  &copy; 2025 Paginas Web Baratas Valdemoro — Todos los derechos reservados
 </footer>
 
 <script>
-  // Slider funcional
+  // Slider simple y accesible
   const slides = document.getElementById('slides');
   const totalSlides = slides.children.length;
   let currentIndex = 0;
 
   function showSlide(index) {
-    if (index < 0) index = totalSlides - 1;
+    if (index < 0) index = totalSlides -1;
     if (index >= totalSlides) index = 0;
     slides.style.transform = `translateX(-${index * 100}%)`;
+    // Accesibilidad: aria-hidden y tabIndex en slides
+    for (let i = 0; i < totalSlides; i++) {
+      slides.children[i].setAttribute('aria-hidden', i !== index);
+    }
     currentIndex = index;
   }
 
-  document.getElementById('prev').addEventListener('click', () => showSlide(currentIndex - 1));
-  document.getElementById('next').addEventListener('click', () => showSlide(currentIndex + 1));
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+  });
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+  });
 
-  setInterval(() => showSlide(currentIndex + 1), 6000);
+  // Auto slider cada 7 segundos
+  setInterval(() => {
+    showSlide(currentIndex + 1);
+  }, 7000);
 
-  // Mostrar la primera slide al cargar
   showSlide(0);
 </script>
 
