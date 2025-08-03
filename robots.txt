@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paginaswebvaldemoro.github.io/sitemap.xml
+Sitemap: https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro/sitemap.xml
