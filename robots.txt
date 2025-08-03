@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow:
 
 Sitemap: https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro/sitemap.xml
