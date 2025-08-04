@@ -1,341 +1,355 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Paginas Web Baratas Valdemoro | Diseño y Desarrollo Profesional SEO</title>
-<meta name="description" content="Diseño y desarrollo de páginas web baratas en Valdemoro. Webs profesionales, rápidas y optimizadas para Google y tus clientes. Contacta: 615 09 68 57." />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro" />
-
-<!-- JSON-LD para SEO local y empresa -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Paginas Web Baratas Valdemoro",
-  "image": "https://paginaswebvaldemoro.github.io/logo.png",
-  "telephone": "+34615096857",
-  "email": "paginaswebvaldemoro@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Valdemoro",
-    "addressRegion": "Madrid",
-    "addressCountry": "ES"
-  },
-  "url": "https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro",
-  "description": "Diseño y desarrollo de páginas web baratas en Valdemoro, rápidas, responsivas y optimizadas para SEO local.",
-  "openingHours": "Mo,Tu,We,Th,Fr 09:00-19:00"
-}
-</script>
-
-<style>
-  /* Reset */
-  *, *::before, *::after { box-sizing: border-box; }
-  body {
-    margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fefefe; color: #1a1a1a; line-height: 1.6;
-  }
-  a {
-    color: #0d47a1; text-decoration: none;
-  }
-  a:hover, a:focus {
-    text-decoration: underline;
-  }
-  header {
-    background-color: #0d47a1;
-    color: white;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-  header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: 700;
-  }
-  nav a {
-    margin-left: 2rem;
-    font-weight: 600;
-    font-size: 1rem;
-  }
-  nav a:first-child {
-    margin-left: 0;
-  }
-  nav a:focus-visible {
-    outline: 2px solid #ffca28;
-    outline-offset: 2px;
-  }
-
-  /* Slider */
-  .slider {
-    max-width: 1100px;
-    margin: 1.5rem auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-  }
-  .slides {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
-  }
-  .slide {
-    min-width: 100%;
-    position: relative;
-    color: white;
-  }
-  .slide img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    filter: brightness(0.55);
-    border-radius: 12px;
-  }
-  .slide-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 90%;
-    text-align: center;
-    font-weight: 700;
-    text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
-  }
-  .slide-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 0.3rem;
-  }
-  .slide-text p {
-    font-size: 1.3rem;
-  }
-  .slider-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-  .slider-btn {
-    pointer-events: auto;
-    background: rgba(0,0,0,0.45);
-    border: none;
-    color: white;
-    font-size: 2.2rem;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  .slider-btn:hover,
-  .slider-btn:focus {
-    background: #ffca28;
-    color: #0d47a1;
-    outline: none;
-  }
-
-  /* Main content */
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1.25rem;
-  }
-  h2, h3 {
-    color: #0d47a1;
-    margin-bottom: 1rem;
-  }
-  section {
-    background: white;
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-    border-radius: 14px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
-  }
-  .services-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-    gap: 1.3rem;
-  }
-  .service-item {
-    background: #e3f2fd;
-    border-radius: 10px;
-    padding: 1.4rem 1.6rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-weight: 600;
-    color: #0d47a1;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-    user-select: none;
-    transition: background 0.25s ease;
-  }
-  .service-item:hover {
-    background: #bbdefb;
-  }
-  .service-icon {
-    font-size: 2.4rem;
-    line-height: 1;
-  }
-
-  /* Contacto */
-  #contacto p {
-    font-size: 1.18rem;
-    margin-bottom: 0.4rem;
-  }
-  #contacto a {
-    font-weight: 700;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
-  }
-  #contacto a:hover,
-  #contacto a:focus {
-    border-color: #ffca28;
-    outline: none;
-  }
-  #contacto .telefono {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-top: 0.5rem;
-    color: #0d47a1;
-  }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    background: #0d47a1;
-    color: white;
-    padding: 1.1rem;
-    font-size: 0.95rem;
-    user-select: none;
-    box-shadow: inset 0 3px 6px rgba(0,0,0,0.25);
-  }
-
-  @media (max-width: 600px) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Páginas Web Baratas Valdemoro | Diseño y Desarrollo Web Profesional</title>
+  <meta name="description" content="Diseño y desarrollo de páginas web baratas en Valdemoro, rápidas, responsivas y optimizadas para SEO local. Consigue tu web profesional hoy." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro/" />
+  <style>
+    /* Reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fafafa; color: #222;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: #007acc; text-decoration: none;
+    }
+    a:hover, a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
     header {
-      flex-direction: column;
-      gap: 0.5rem;
-      padding: 1rem;
+      background-color: #004080;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
-    .slide-text h2 {
-      font-size: 1.8rem;
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 1px;
     }
-    .slide-text p {
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      font-weight: 600;
       font-size: 1rem;
     }
-  }
-</style>
-</head>
-<body>
+    nav a:focus-visible {
+      outline: 2px solid #00aaff;
+      outline-offset: 2px;
+    }
 
+    /* Slideshow */
+    .slideshow {
+      position: relative;
+      max-width: 900px;
+      margin: 2rem auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      background-color: #fff;
+    }
+    .slide {
+      display: none;
+      position: relative;
+    }
+    .slide img {
+      width: 100%;
+      vertical-align: middle;
+      filter: brightness(0.85);
+      max-height: 400px;
+      object-fit: cover;
+    }
+    .slide-text {
+      position: absolute;
+      bottom: 20px;
+      left: 25px;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      max-width: 80%;
+      line-height: 1.2;
+    }
+    button.prev, button.next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      margin-top: -20px;
+      color: white;
+      background-color: rgba(0,0,0,0.35);
+      border: none;
+      border-radius: 50%;
+      font-size: 1.8rem;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    button.prev:hover, button.next:hover,
+    button.prev:focus, button.next:focus {
+      background-color: rgba(0,0,0,0.65);
+      outline: none;
+    }
+    button.prev { left: 15px; }
+    button.next { right: 15px; }
+
+    .dots {
+      text-align: center;
+      padding: 15px 0;
+      background: #fff;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      user-select: none;
+    }
+    .dot {
+      cursor: pointer;
+      height: 14px;
+      width: 14px;
+      margin: 0 6px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      border: none;
+    }
+    .dot.active,
+    .dot:hover,
+    .dot:focus-visible {
+      background-color: #007acc;
+      outline: none;
+    }
+
+    /* Sections */
+    main {
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      margin-top: 0;
+      font-size: 1.9rem;
+      color: #004080;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.4rem;
+      color: #333;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+    }
+    .external-link::after {
+      content: " ↗";
+      font-size: 0.85rem;
+      color: #007acc;
+    }
+    section p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Contacto */
+    #contacto p {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    #contacto a {
+      font-weight: 700;
+      color: #004080;
+    }
+    #contacto a:hover, #contacto a:focus {
+      color: #0066cc;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 1rem 1rem;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      .slide-text {
+        font-size: 1rem;
+        max-width: 95%;
+        left: 15px;
+        bottom: 15px;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD para SEO local y empresa -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Paginas Web Baratas Valdemoro",
+    "image": "https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro/logo.png",
+    "telephone": "+34615096857",
+    "email": "paginaswebvaldemoro@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Valdemoro",
+      "addressRegion": "Madrid",
+      "addressCountry": "ES"
+    },
+    "url": "https://paginaswebvaldemoro.github.io/paginas-web-baratas-valdemoro/",
+    "description": "Diseño y desarrollo de páginas web baratas en Valdemoro, rápidas, responsivas y optimizadas para SEO local.",
+    "openingHours": "Mo,Tu,We,Th,Fr 09:00-19:00"
+  }
+  </script>
+</head>
+
+<body>
 <header>
-  <h1>Paginas Web Baratas Valdemoro</h1>
-  <nav aria-label="Menú principal">
+  <h1>Páginas Web Baratas Valdemoro</h1>
+  <nav aria-label="Navegación principal">
     <a href="#servicios">Servicios</a>
-    <a href="#portfolio">Trabajos</a>
+    <a href="#trabajos">Trabajos</a>
     <a href="#contacto">Contacto</a>
   </nav>
 </header>
 
-<!-- SLIDER -->
-<div class="slider" role="region" aria-label="Presentación de servicios de desarrollo web">
-  <div class="slides" id="slides">
-    <div class="slide" aria-hidden="false">
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/04/19/code-1869235_1280.jpg" alt="Diseño web profesional" loading="lazy" />
-      <div class="slide-text">
-        <h2>Diseño web profesional en Valdemoro</h2>
-        <p>Webs rápidas, modernas y optimizadas para SEO.</p>
-      </div>
-    </div>
-    <div class="slide" aria-hidden="true">
-      <img src="https://cdn.pixabay.com/photo/2017/08/10/03/32/website-2619444_1280.jpg" alt="Desarrollo web responsive" loading="lazy" />
-      <div class="slide-text">
-        <h2>Web responsive y adaptativa</h2>
-        <p>Tu web se verá perfecta en móvil, tablet y PC.</p>
-      </div>
-    </div>
-    <div class="slide" aria-hidden="true">
-      <img src="https://cdn.pixabay.com/photo/2019/04/13/21/42/development-4129637_1280.jpg" alt="Optimización SEO local" loading="lazy" />
-      <div class="slide-text">
-        <h2>Optimización SEO local en Valdemoro</h2>
-        <p>Posicionamos tu negocio para que te encuentren primero.</p>
-      </div>
-    </div>
-  </div>
-  <div class="slider-buttons">
-    <button class="slider-btn" aria-label="Slide anterior" id="prevBtn">&#10094;</button>
-    <button class="slider-btn" aria-label="Slide siguiente" id="nextBtn">&#10095;</button>
-  </div>
-</div>
-
 <main>
+  <div class="slideshow" aria-label="Presentación de servicios" role="region">
+    <article class="slide" aria-hidden="false" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Diseño web responsive en Valdemoro" />
+      <div class="slide-text">Diseño web responsive, adaptable a móviles y tablets</div>
+    </article>
+    <article class="slide" aria-hidden="true" tabindex="-1">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Optimización SEO local para negocios en Valdemoro" />
+      <div class="slide-text">Optimización SEO local para negocios en Valdemoro</div>
+    </article>
+    <article class="slide" aria-hidden="true" tabindex="-1">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Servicios de mantenimiento y actualización web en Valdemoro" />
+      <div class="slide-text">Servicios de mantenimiento y actualización web en Valdemoro</div>
+    </article>
+
+    <button class="prev" aria-label="Anterior">&#10094;</button>
+    <button class="next" aria-label="Siguiente">&#10095;</button>
+  </div>
+
+  <div class="dots" role="tablist" aria-label="Controles de presentación">
+    <button class="dot active" role="tab" aria-selected="true" aria-controls="slide1" id="dot1" tabindex="0"></button>
+    <button class="dot" role="tab" aria-selected="false" aria-controls="slide2" id="dot2" tabindex="-1"></button>
+    <button class="dot" role="tab" aria-selected="false" aria-controls="slide3" id="dot3" tabindex="-1"></button>
+  </div>
+
   <section id="servicios" tabindex="-1">
-    <h2>Servicios de diseño y desarrollo web en Valdemoro</h2>
-    <div class="services-list" role="list">
-      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">🖥️</span> Diseño web moderno y responsivo</div>
-      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">⚙️</span> Desarrollo web personalizado</div>
-      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">🚀</span> Optimización SEO local para Google</div>
-      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">🔧</span> Mantenimiento y actualizaciones</div>
-      <div class="service-item" role="listitem"><span class="service-icon" aria-hidden="true">📞</span> Formularios de contacto y WhatsApp</div>
-    </div>
+    <h2>Servicios</h2>
+    <ul>
+      <li>Diseño y desarrollo de páginas web profesionales, adaptadas a todo tipo de dispositivos.</li>
+      <li>Optimización SEO local para mejorar la visibilidad en Google y atraer clientes de Valdemoro.</li>
+      <li>Mantenimiento y actualización continua de tu página web.</li>
+      <li>Integración con redes sociales y herramientas de marketing digital.</li>
+      <li>Hosting y dominios personalizados.</li>
+    </ul>
   </section>
 
-  <section id="portfolio" tabindex="-1">
+  <section id="trabajos" tabindex="-1">
     <h2>Trabajos realizados</h2>
-    <p>Próximamente mostraremos ejemplos reales de páginas web hechas para negocios locales en Valdemoro. Trabajos hechos a medida y con resultados visibles.</p>
+    <ul>
+      <li><a href="https://www.euro-sone.com/" class="external-link" target="_blank" rel="noopener noreferrer">Euro Sone</a></li>
+      <li><a href="https://carnesyembutidospalomino.com/" class="external-link" target="_blank" rel="noopener noreferrer">Carnes y Embutidos Palomino</a></li>
+      <li><a href="https://www.farmaceuticos.com/" class="external-link" target="_blank" rel="noopener noreferrer">Farmacéuticos</a></li>
+      <li><a href="https://supima.com/" class="external-link" target="_blank" rel="noopener noreferrer">Supima</a></li>
+    </ul>
   </section>
 
   <section id="contacto" tabindex="-1">
     <h2>Contacto</h2>
-    <p>¿Quieres una página web barata y profesional? Escríbenos o llama sin compromiso:</p>
-    <p>Email: <a href="mailto:paginaswebvaldemoro@gmail.com" rel="nofollow noopener noreferrer">paginaswebvaldemoro@gmail.com</a></p>
-    <p class="telefono" aria-label="Teléfono de contacto">📞 615 09 68 57</p>
+    <p>Correo electrónico: <a href="mailto:paginaswebvaldemoro@gmail.com">paginaswebvaldemoro@gmail.com</a></p>
+    <p>Teléfono: <a href="tel:+34615096857">615 09 68 57</a></p>
   </section>
 </main>
 
 <footer>
-  &copy; 2025 Paginas Web Baratas Valdemoro — Todos los derechos reservados
+  &copy; 2025 Páginas Web Baratas Valdemoro - Todos los derechos reservados.
 </footer>
 
 <script>
-  // Slider simple y accesible
-  const slides = document.getElementById('slides');
-  const totalSlides = slides.children.length;
-  let currentIndex = 0;
+  (() => {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
 
-  function showSlide(index) {
-    if (index < 0) index = totalSlides -1;
-    if (index >= totalSlides) index = 0;
-    slides.style.transform = `translateX(-${index * 100}%)`;
-    // Accesibilidad: aria-hidden y tabIndex en slides
-    for (let i = 0; i < totalSlides; i++) {
-      slides.children[i].setAttribute('aria-hidden', i !== index);
+    function showSlide(index) {
+      if(index >= slides.length) index = 0;
+      if(index < 0) index = slides.length - 1;
+
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+        slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+        slide.tabIndex = (i === index) ? 0 : -1;
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+        dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+        dot.tabIndex = (i === index) ? 0 : -1;
+      });
+
+      currentIndex = index;
     }
-    currentIndex = index;
-  }
 
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    showSlide(currentIndex - 1);
-  });
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    showSlide(currentIndex + 1);
-  });
+    function nextSlide() { showSlide(currentIndex + 1); }
+    function prevSlide() { showSlide(currentIndex - 1); }
 
-  // Auto slider cada 7 segundos
-  setInterval(() => {
-    showSlide(currentIndex + 1);
-  }, 7000);
+    document.querySelector('.next').addEventListener('click', nextSlide);
+    document.querySelector('.prev').addEventListener('click', prevSlide);
 
-  showSlide(0);
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => showSlide(i));
+      dot.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showSlide(i);
+        }
+      });
+    });
+
+    // Auto slide cada 7 segundos
+    setInterval(() => {
+      nextSlide();
+    }, 7000);
+
+    // Mostrar primer slide al cargar
+    showSlide(0);
+  })();
 </script>
-
 </body>
 </html>
