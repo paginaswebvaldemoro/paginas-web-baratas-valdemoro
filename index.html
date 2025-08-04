@@ -133,6 +133,34 @@
       background-color: #007acc;
     }
 
+    /* Flechas */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: rgba(255,255,255,0.8);
+      background-color: rgba(0,0,0,0.3);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+    .arrow:hover {
+      background-color: rgba(0,0,0,0.6);
+    }
+    .arrow-left {
+      left: 10px;
+    }
+    .arrow-right {
+      right: 10px;
+    }
+
     /* Secciones */
     main {
       max-width: 1000px;
@@ -216,6 +244,12 @@
         right: 15px;
         bottom: 15px;
       }
+      .arrow {
+        font-size: 1.8rem;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
     }
   </style>
 </head>
@@ -249,6 +283,11 @@
       <div class="slide-text">Webs modernas y económicas para emprendedores</div>
     </div>
   </div>
+
+  <!-- Flechas -->
+  <div class="arrow arrow-left" role="button" aria-label="Slide anterior" tabindex="0">&#10094;</div>
+  <div class="arrow arrow-right" role="button" aria-label="Slide siguiente" tabindex="0">&#10095;</div>
+
   <div class="slider-buttons" role="tablist" aria-label="Controles del slideshow">
     <span class="slider-button active" role="tab" aria-selected="true" tabindex="0"></span>
     <span class="slider-button" role="tab" aria-selected="false" tabindex="-1"></span>
@@ -295,6 +334,8 @@
   // Slideshow funcional
   const slides = document.querySelector('.slides');
   const buttons = document.querySelectorAll('.slider-button');
+  const arrowLeft = document.querySelector('.arrow-left');
+  const arrowRight = document.querySelector('.arrow-right');
   let currentIndex = 0;
   const totalSlides = buttons.length;
 
@@ -318,7 +359,16 @@
     });
   });
 
-  // Auto slide cada 6 segundos
+  arrowLeft.addEventListener('click', () => showSlide(currentIndex - 1));
+  arrowLeft.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' || e.key === ' ') showSlide(currentIndex - 1);
+  });
+  arrowRight.addEventListener('click', () => showSlide(currentIndex + 1));
+  arrowRight.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' || e.key === ' ') showSlide(currentIndex + 1);
+  });
+
+  // Auto slide cada 4 segundos
   setInterval(() => {
     showSlide(currentIndex + 1);
   }, 4000);
